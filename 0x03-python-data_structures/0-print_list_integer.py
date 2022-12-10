@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-length = len(my_list + 1)
-for i in range(length):
+for i in range(len(my_list) + 1):
     print("{}".format(my_list[i]))
