@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 def print_sorted_dictionary(a_dictionary):
-    sort = dict(sorted(a_dictionary))
-    print(sort)
+    for i in sorted(tuple(a_dictionary)):
+        print("{}: {}".format(i, a_dictionary.get(i)))
