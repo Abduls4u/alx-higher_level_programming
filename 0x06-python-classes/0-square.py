@@ -7,7 +7,9 @@ Usage:
 Author:
     Abdulsalam Abdulsomad .A. - December 20th, 2022.
 '''
+
+
 class Square:
-'''' An empty class that represents a square.'''
+    ''' An empty class that represents a square.'''
 
     pass
