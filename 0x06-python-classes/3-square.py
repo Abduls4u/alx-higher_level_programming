@@ -14,7 +14,7 @@ class Square:
         '''Constructs all the necessary attributes for the square object.
         parameters:
         ___________
-             size(int): size of a square.
+            size(int): size of a square.
         '''
 
         self.__size = size
@@ -22,3 +22,11 @@ class Square:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
+    def area(self):
+        ''' returns the area of a square.
+        parameters:
+        __________
+        Return:
+            square of size.
+        '''
+        return (self.__size ** 2)
