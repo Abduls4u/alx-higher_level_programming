@@ -23,6 +23,20 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
 
+    @property
+    def size(self):
+        '''Getter method to retrieve '''
+        return (self.__size)
+
+    @size.setter
+    def size(self, value):
+        '''setter method to set value.'''
+        if not type(value) is int:
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
+
     def area(self):
         ''' returns the area of a square.
         parameters:
@@ -31,3 +45,13 @@ class Square:
             square of size.
         '''
         return (self.__size ** 2)
+
+    def my_print(self):
+        '''Prints a square to stdout'''
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print('#', end="")
+                print()
