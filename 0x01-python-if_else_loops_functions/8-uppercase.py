@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def islower(char):
+def is_lower(char):
     if ord(char) <= ord('z') and ord(char) >= ord('a'):
         return (True)
     else:
@@ -7,12 +7,12 @@ def islower(char):
 
 
 def uppercase(str):
-    new = ""
-    for a in str:
-        if islower(a):
-            new_char = chr(ord(a) - ord('a') + ord('A'))
-            new += new_char
+    upper_string = ""
+    for char in string:
+        if is_lower(char):
+            upper_char = chr(ord(char) - ord('a') + ord('A'))
+            upper_string += upper_char
         else:
-            new += a
-        print("{}".format(new), end="")
+            upper_string += char
+    print("{}".format(upper_string), end="")
     print()
