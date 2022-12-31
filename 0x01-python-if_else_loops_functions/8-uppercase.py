@@ -6,7 +6,7 @@ def is_lower(char):
         return (False)
 
 
-def uppercase(str):
+def uppercase(string):
     upper_string = ""
     for char in string:
         if is_lower(char):
