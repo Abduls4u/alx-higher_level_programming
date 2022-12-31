@@ -10,7 +10,7 @@ def uppercase(str):
     new = ""
     for a in str:
         if islower(a):
-            new_char += chr(ord(a) - ord('a') + ord('A'))
+            new_char = chr(ord(a) - ord('a') + ord('A'))
             new += new_char
         else:
             new += a
