@@ -69,3 +69,18 @@ class Rectangle:
             return (0)
         else:
             return (2 * (self.__width + self.__height))
+
+    def __str__(self) -> str:
+        '''prints the rectangle in an informal and printablr representation'''
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+        rectangle = ""
+        for length in range(self.__height):
+            for breadth in range(self.__width):
+                rectangle += '#'
+            if length < (self.__height - 1):
+                rectangle += "\n"
+        return (rectangle)
+
+    def __repr__(self):
+        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
