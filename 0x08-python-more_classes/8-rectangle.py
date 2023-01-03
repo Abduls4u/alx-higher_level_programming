@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 ''' class that defines a rectangle.
 Usage:
-    ./7-rectangle.py
+    ./8-rectangle.py
 Author:
     Abdulsalam Abdulsomad .A. - January 2nd, 2023.
 '''
