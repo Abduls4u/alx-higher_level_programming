@@ -1,0 +1,50 @@
+The 0-add_integer test file by:
+    ABDULSALAM ABDULSOMAD .A., January 3rd, 2023.
+-----------------------------------------------------------------
+
+How to use ``0-add_integer.py``
+===============================
+
+    The 0-add_integer.py module contains the definition of a function ``add()`` that returns the sum of two integers.
+
+Importing the module:
+=======================
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Applying test cases:
+====================
+::
+	Two positive integers ==>
+        >>>add_integer(5,6)
+        11
+
+::
+   	A positive and a negative integer ==>
+		>>> add_integer(4,-1)
+		3
+
+::
+	Two floats ==>
+		>>> add_integer(5.0,5.0)
+		10
+
+::
+	A float and an int ==>
+		>>> add_integer(5.0, 2)
+		7
+
+::
+	It is very important to note that floats get truncated during the addition.
+		>>> add_integer(5.9, 2)
+		7
+
+::
+	Two negative floats ==>
+		>>> add_integer(-5.9, -2)
+		-7
+
+::
+	It is also important to note that the second argument is optional and 98 by default.
+		>>> add_integer(0)
+		98
+
