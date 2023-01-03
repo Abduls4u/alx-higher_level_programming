@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-''' A class that defines a rectangle.
+''' class that defines a rectangle.
 Usage:
-    ./4-rectangle.py
+    ./7-rectangle.py
 Author:
     Abdulsalam Abdulsomad .A. - January 2nd, 2023.
 '''
@@ -9,6 +9,9 @@ Author:
 
 class Rectangle:
     ''' A class that represents a square.'''
+
+    number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         '''Constructs all the necessary attributes for the rectangle object.
@@ -20,6 +23,7 @@ class Rectangle:
 
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -77,11 +81,19 @@ class Rectangle:
         rectangle = ""
         for length in range(self.__height):
             for breadth in range(self.__width):
-                rectangle += '#'
+                try:
+                    rectangle += str(self.print_symbol)
+                except Exception:
+                    rectangle += type(self).print_symbol
             if length < (self.__height - 1):
                 rectangle += "\n"
         return (rectangle)
 
     def __repr__(self):
-     '''prints the official represenatation of the rectangle.'''
+        '''prints the official represenatation of the rectangle.'''
         return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
+
+    def __del__(self):
+        '''prints a message when an instance is deleted'''
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
