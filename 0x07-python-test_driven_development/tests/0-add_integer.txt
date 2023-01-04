@@ -15,7 +15,7 @@ Applying test cases:
 ====================
 ::
 	Two positive integers ==>
-        >>>add_integer(5,6)
+        >>> add_integer(5,6)
         11
 
 ::
@@ -48,3 +48,52 @@ Applying test cases:
 		>>> add_integer(0)
 		98
 
+Non-number arguments:
+=====================
+::
+	No argument ==>
+		>>> add_integer()
+		Traceback (most recent call last):
+		TypeError: add_integer() missing 1 required positional argument: 'a'
+
+::
+	passing None ==>
+		>>> add_integer(None)
+		Traceback (most recent call last):
+		TypeError: a must be an integer
+
+::
+	String and int ==>
+		>>> add_integer(3.0, 'hi')
+		Traceback (most recent call last):
+		TypeError: b must be an integer
+
+		>>> add_integer('hi', 6)
+		Traceback (most recent call last):
+		TypeError: a must be an integer
+
+::
+	None and float ==>
+		>>> add_integer(3.0, None)
+		Traceback (most recent call last):
+		TypeError: b must be an integer
+
+::
+	Two strings ==>
+		>>> add_integer('funny', 'clown')
+		Traceback (most recent call last):
+		TypeError: a must be an integer
+
+Passing infinity and NaN numbers:
+=================================
+::
+	Int and infinity ==>
+		>>> add_integer(3, float('inf'))
+		Traceback (most recent call last):
+		OverflowError: cannot convert float infinity to integer
+
+::
+	Int and NaN ==>
+		>>> add_integer(float('nan'))
+		Traceback (most recent call last):
+		ValueError: cannot convert float NaN to integer	
