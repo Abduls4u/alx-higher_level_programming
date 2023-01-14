@@ -42,8 +42,13 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_floats_n_ints(self):
         ''' Tests a lists containing ints and floats. '''
-        floats_n_ints = [1.2, 3.4, 6, 7.8, 8.9, 10]
+        floats_n_ints = [1.2, 3.4, -6, 7.8, 8.9, 10]
         self.assertEqual(max_integer(floats_n_ints), 10)
+
+    def test_negative(self):
+        ''' Tests a list whose items are all negative digits. '''
+        negative = [-6, -5, -1]
+        self.assertEqual(max_integer(negative), -1)
 
     if __name__ == "__main__":
         unittest.main()
