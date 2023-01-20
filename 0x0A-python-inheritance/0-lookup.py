@@ -10,6 +10,5 @@ Author:
 def lookup(obj):
     '''Returns the list of available attributes and methods of an object .'''
 
-    attr = []
-    attr.append(dir(obj))
-    return (attr)
+    attr = dir(obj)
+    return (list(attr))
