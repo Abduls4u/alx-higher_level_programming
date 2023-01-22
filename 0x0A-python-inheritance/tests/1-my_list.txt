@@ -1,0 +1,81 @@
+The  1-my_list test file by:
+    ABDULSALAM ABDULSOMAD .A., January 22nd, 2023.
+----------------------------------------------------------------
+
+Importing the module:
+=====================
+		>>> MyList = __import__('1-my_list').MyList
+
+Applying test cases:
+====================
+
+Testing if module(1-my_list.py) is documented:
+         >>> module_doc = __import__("1-my_list").__doc__
+         >>> len(module_doc) > 1
+         True
+
+Testing if class(MyList) is documented:
+         >>> class_doc = __import__("1-my_list").MyList.__doc__
+         >>> len(class_doc) > 1
+         True
+
+Testing if method(print_sorted) is documented:
+	  >>> method_doc = __import__("1-my_list").MyList.print_sorted.__doc__
+	  >>> len(method_doc) > 1
+	  True
+
+Testing if MyList inherits from list:
+	  >>> issubclass(MyList, list)
+	  True
+
+Testing an empty list:
+	  >>> list = MyList()
+	  >>> list.print_sorted()
+	  []
+
+Testing if appendng works:
+	  >>> list.append(1)
+	  >>> list.append(2)
+	  >>> list.append(3)
+	  >>> list.append(4)
+	  >>> print(list)
+	  [1, 2, 3, 4]
+
+Testing a sorted(ascending) list:
+	  >>> list.print_sorted()
+	  [1, 2, 3, 4]
+
+Testing a sorted(Descending) list:
+	  >>> list = MyList()
+	  >>> list.append(4)
+	  >>> list.append(3)
+	  >>> list.append(2)
+	  >>> list.append(1)
+	  >>> print(list)
+	  [4, 3, 2, 1]
+	  >>> list.print_sorted()
+	  [1, 2, 3, 4]
+	  >>> print(list)
+	  [4, 3, 2, 1]
+
+Testing a list with a negative number:
+	  >>> list.append(-1)
+	  >>> list.append(5)
+	  >>> print(list)
+	  [4, 3, 2, 1, -1, 5]
+	  >>> list.print_sorted()
+	  [-1, 1, 2, 3, 4, 5]
+	  >>> print(list)
+	  [4, 3, 2, 1, -1, 5]
+
+Testing  negative numbers:
+	  >>> list = MyList()
+	  >>> list.append(-10)
+	  >>> list.append(-1)
+	  >>> list.append(-7)
+	  >>> list.append(-2)
+	  >>> list.append(-8)
+	  >>> print(list)
+	  [-10, -1, -7, -2, -8]
+	  >>> list.print_sorted()
+	  [-10, -8, -7, -2, -1]
