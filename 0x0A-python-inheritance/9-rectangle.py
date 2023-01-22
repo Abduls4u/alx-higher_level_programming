@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' A module that contains the classRecyangle that inherits from BaseGeometry.
+''' A module that contains the class Rectangle that inherits from BaseGeometry.
 Usage:
     ./8-rectangle.py
 Author:
