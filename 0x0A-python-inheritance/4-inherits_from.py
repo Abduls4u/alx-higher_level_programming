@@ -1,3 +1,4 @@
+#!/bin/usr/python3
 ''' A module that contains a function that tests if an object is
 a subclass.
 Usage:
