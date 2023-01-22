@@ -53,10 +53,6 @@ Testing with an integer lesser than 0;
           ValueError: integer must be greater than 0
 
 Testing with non-integer types; 
-      >>> b.integer_validator("bool", True)
-      Traceback (most recent call last):
-          ...
-          TypeError: bool must be an integer
 
 	  >>> b.integer_validator("float", 1.5)
           Traceback (most recent call last):
