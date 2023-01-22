@@ -10,7 +10,7 @@ Author:
 class BaseGeometry:
     ''' Class BaseGeometry. '''
 
-    def __init__(self, width=0, height=0):
+    def __init__(self):
         '''Constructs all the necessary attributes for the class. '''
         pass
 
