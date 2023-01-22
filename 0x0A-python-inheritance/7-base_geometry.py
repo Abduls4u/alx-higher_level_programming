@@ -10,15 +10,14 @@ Author:
 class BaseGeometry:
     ''' Class BaseGeometry. '''
 
-    def __init__(self):
-        '''Constructs all the necessary attributes for the class. '''
-        pass
-
     def area(self):
+        '''raises an exception'''
         raise Exception('area() is not implemented')
 
     def integer_validator(self, name, value):
-        if not isinstance(value, int):
+        ''' Validates an integer'''
+
+        if not type(value) is int:
             raise TypeError(name + ' must be an integer')
         if value <= 0:
             raise ValueError(name + ' must be greater than 0')
