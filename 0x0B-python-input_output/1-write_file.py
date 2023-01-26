@@ -8,11 +8,15 @@ Author:
 
 
 def write_file(filename="", text=""):
-    ''' A function that writes a string to a text file (UTF8) and returns the number of characters written
+    ''' A function that writes a string to a text file (UTF8) and
+returns the number of characters written
     Parameters:
-        -----------
+    -----------
         filename(str): Name of the file to write to.
         text(str): text to be written
+    Return(int):
+    ------------
+        Number of chars written
     '''
 
     with open(filename, 'w', encoding='utf-8') as myfile:
