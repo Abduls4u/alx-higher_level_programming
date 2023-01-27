@@ -15,5 +15,5 @@ def load_from_json_file(filename):
         filename(str): Name of the file to write to.
     '''
 
-    with open(filename):
-        return (json.load(filename))
+    with open(filename) as myfile:
+        return (json.load(myfile))
