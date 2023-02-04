@@ -105,21 +105,37 @@ class Rectangle(Base):
                                                        self.__height)
         return (rect)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''assigns an argument to each attribute'''
-        count = 0
-        for argument in args:
-            if count == 0:
-                if argument is None:
-                    self.__init__(self.width, self.height, self.x, self.y)
-                else:
-                    self.id = argument
-            if count == 1:
-                self.__width = argument
-            if count == 2:
-                self.__height = argument
-            if count == 3:
-                self.__x = argument
-            if count == 4:
-                self.__y = argument
-            count += 1
+        if len(args) != 0:
+            count = 0
+            for argument in args:
+                if count == 0:
+                    if argument is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = argument
+                if count == 1:
+                    self.__width = argument
+                if count == 2:
+                    self.__height = argument
+                if count == 3:
+                    self.__x = argument
+                if count == 4:
+                    self.__y = argument
+                count += 1
+        elif len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    if value is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = value
+                if key == 'width':
+                    self.__width = value
+                if key == 'height':
+                    self.__height = value
+                if key == 'x':
+                    self.__x = value
+                if key == 'y':
+                    self.__y = value
