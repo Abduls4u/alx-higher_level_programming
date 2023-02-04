@@ -17,6 +17,8 @@ class Rectangle(Base):
         ___________
              width: Breadth of the rectangle.
              height: Length of the rectangle.
+             x: x axis
+             y: y axis
         '''
 
         self.width = width
@@ -102,3 +104,22 @@ class Rectangle(Base):
                                                        self.__width,
                                                        self.__height)
         return (rect)
+
+    def update(self, *args):
+        '''assigns an argument to each attribute'''
+        count = 0
+        for argument in args:
+            if count == 0:
+                if argument is None:
+                    self.__init__(self.width, self.height, self.x, self.y)
+                else:
+                    self.id = argument
+            if count == 1:
+                self.__width = argument
+            if count == 2:
+                self.__height = argument
+            if count == 3:
+                self.__x = argument
+            if count == 4:
+                self.__y = argument
+            count += 1
