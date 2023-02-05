@@ -24,7 +24,7 @@ class Square(Rectangle):
 
     def __str__(self):
         ''' returns informal representation '''
-        sqr = f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
+        sqr = f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
         return (sqr)
 
     @property
@@ -49,7 +49,7 @@ class Square(Rectangle):
                     else:
                         self.id = argument
                 if count == 1:
-                    self.size == argument
+                    self.size = argument
                 if count == 2:
                     self.x = argument
                 if count == 3:
