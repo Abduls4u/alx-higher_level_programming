@@ -26,7 +26,7 @@ class Base:
         '''returns json representation '''
         jstr = ''
         if list_dictionaries is None:
-            jstr = '\"[]\"'
+            jstr = "[]"
         else:
             jstr = json.dumps(list_dictionaries)
         return (jstr)

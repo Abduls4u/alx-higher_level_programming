@@ -12,3 +12,17 @@ if __name__ == "__main__":
     print(type(dictionary))
     print(json_dictionary)
     print(type(json_dictionary))
+
+list_dictionaries = None
+rjson = Base.to_json_string(list_dictionaries)
+rjson_expected = "[]"
+
+if rjson is None:
+    print("to_json_string is not returning a string")
+    exit(1)
+
+if rjson != rjson_expected:
+    print("to_json_string on {} must return {}: {}".format(list_dictionaries, rjson_expected, rjson))
+    exit(1)
+
+print("OK", end="")
