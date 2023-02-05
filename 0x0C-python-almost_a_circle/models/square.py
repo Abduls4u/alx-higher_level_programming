@@ -37,3 +37,34 @@ class Square(Rectangle):
         '''setter method to set the value of size'''
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        '''method tgat assigns attribute.'''
+        if len(args) != 0:
+            count = 0
+            for argument in args:
+                if count == 0:
+                    if argument is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = argument
+                if count == 1:
+                    self.size == argument
+                if count == 2:
+                    self.x = argument
+                if count == 3:
+                    self.y = argument
+                count += 1
+        elif len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    if value is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = value
+                if key == 'size':
+                    self.size = value
+                if key == 'x':
+                    self.x = value
+                if key == 'y':
+                    self.y = value
