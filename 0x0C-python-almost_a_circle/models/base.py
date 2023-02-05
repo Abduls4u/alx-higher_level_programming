@@ -5,6 +5,7 @@ Usage:
 Author:
     Abdulsalam Abdulsomad .A. - February 4th, 2023.
 '''
+import json
 
 
 class Base:
@@ -19,3 +20,12 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        '''returns json representation '''
+        jstr = ''
+        if list_dictionaries is None:
+            jstr = '"[]"'
+        else:
+            jstr = json.dumps(list_dictionaries)
+        return (jstr)
