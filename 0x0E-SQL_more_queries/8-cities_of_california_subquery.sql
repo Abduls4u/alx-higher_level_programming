@@ -3,7 +3,7 @@
 SELECT id, name
 FROM cities
 WHERE state_id IN (
-					SELECT * FROM states
+					SELECT id FROM states
 					WHERE name = California
 					)
-ORDER BY id ASC
+ORDER BY id ASC;
