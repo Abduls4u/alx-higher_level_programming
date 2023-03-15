@@ -27,8 +27,10 @@ class Square:
         self.__position = position
         if not type(position) is tuple or len(position) < 2:
             if position[0] < 0 or position[1] < 0:
-                raise TypeError("position must be a tuple of \
-2 positive integers")
+                if (not type(position[0]) is int and 
+                        not type(position[1]) is int):
+                    raise TypeError("position must be a tuple of\
+ 2 positive integers")
 
     @property
     def position(self):
@@ -41,8 +43,10 @@ class Square:
         '''setter method to set value.'''
         if not type(position) is tuple or len(position) < 2:
             if position[0] < 0 or position[1] < 0:
-                raise TypeError("position must be a tuple of \
-2 positive integers")
+                if not type(position[0]) is int and \
+                      not type(position[1]) is int:
+                    raise TypeError("position must be a tuple of\
+ 2 positive integers")
 
     @property
     def size(self):

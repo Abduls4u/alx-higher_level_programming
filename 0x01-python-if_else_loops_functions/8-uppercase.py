@@ -10,6 +10,7 @@ def uppercase(string):
     upper_string = ""
     for char in string:
         if is_lower(char):
+# TO TO UPPERCASE====>
             upper_char = chr(ord(char) - ord('a') + ord('A'))
             upper_string += upper_char
         else:
