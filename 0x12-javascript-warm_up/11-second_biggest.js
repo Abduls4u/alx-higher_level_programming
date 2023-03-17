@@ -9,7 +9,7 @@ if (argv[3] !== undefined) {
     num = Number(argv[i]);
     arr.push(num);
   }
-  arr.sort();
+  arr.sort((a, b) => a - b);
   len = arr.length;
   big = arr[len - 2];
 }
