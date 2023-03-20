@@ -18,6 +18,7 @@ if __name__ == "__main__":
     cursor.execute(query, ('N%',))
     results = cursor.fetchall()
     for row in results:
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
     cursor.close()
     db.close()
