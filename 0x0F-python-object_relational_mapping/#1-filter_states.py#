@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-''' A module that contains  script that lists all states with name
- matching sys.argv[4] from the database hbtn_0e_0_usa.
+''' A module that contains  script that lists all states with
+letter N from the database hbtn_0e_0_usa.
 Usage:
     ./1-filter_states.py
 Author:
@@ -12,10 +12,10 @@ import sys
 
 if __name__ == "__main__":
     db = sql.connect(host="localhost", port=3306, user=sys.argv[1],
-                     passwd=sys.argv[2], db=sys.argv[3])
+                     passwd="root", db="hbtn_0e_0_usa")
     cursor = db.cursor()
-    cursor.execute("SELECT id, name FROM states WHERE\
-                   name LIKE '{}' ORDER BY id ASC".format(sys.argv[4]))
+    query = "SELECT id, name FROM states WHERE name LIKE %s ORDER BY id ASC"
+    cursor.execute(query, ('N%',))
     results = cursor.fetchall()
     for row in results:
         print(row)
