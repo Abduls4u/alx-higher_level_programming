@@ -11,14 +11,13 @@ import sys
 
 
 if __name__ == "__main__":
-    db = sql.connect(host="localhost", port=3306, user="root",
-                     passwd="root", db="hbtn_0e_0_usa")
+    db = sql.connect(host="localhost", port=3306, user=sys.argv[1],
+                     passwd=sys.argv[2], db=sys.argv[3])
     cursor = db.cursor()
     query = "SELECT id, name FROM states WHERE name=%s ORDER BY id ASC"
     cursor.execute(query, (sys.argv[4],))
     states = cursor.fetchall()
     for state in states:
-        if state[1] == sys.argv[4]:
-            print(state)
+        print(state)
     cursor.close()
     db.close()
