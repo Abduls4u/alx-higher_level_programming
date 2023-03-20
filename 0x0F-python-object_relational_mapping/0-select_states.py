@@ -9,12 +9,13 @@ Author:
 import MySQLdb as sql
 
 
-db = sql.connect(host="localhost", port=3306, user="root",
-                 passwd="root", db="hbtn_0e_0_usa")
-cursor = db.cursor()
-cursor.execute("SELECT id, name FROM states ORDER BY id ASC")
-results = cursor.fetchall()
-for row in results:
-    print(row)
-cursor.close()
-db.close()
+if __name__ == __main__:
+    db = sql.connect(host="localhost", port=3306, user="root",
+                     passwd="root", db="hbtn_0e_0_usa")
+    cursor = db.cursor()
+    cursor.execute("SELECT id, name FROM states ORDER BY id ASC")
+    results = cursor.fetchall()
+    for row in results:
+        print(row)
+    cursor.close()
+    db.close()
