@@ -14,7 +14,7 @@ Base = declarative_base()
 
 
 class State(Base):
-    '''A class that creates a table(states) and inheruts from Base'''
+    '''A class that creates a table(states) and inherits from Base'''
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
