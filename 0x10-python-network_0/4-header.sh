@@ -1,3 +1,3 @@
 #!/bin/bash
 # Bash script that takes in a URL, sends a request to a URL
-curl -I -X HEAD -s -D - "$1" | awk '/^Allow:/ {print substr($0, 8)}' 
+curl -sI -H "X-School-User-Id: 98" "$1"
