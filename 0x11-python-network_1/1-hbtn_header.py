@@ -9,6 +9,7 @@ import urllib.request as request
 import sys
 
 
-with request.urlopen(sys.argv[1]) as response:
-    my_header_value = response.getheader('X-Request-Id')
-    print(my_header_value)
+if (len(sys.argv) > 1):
+    with request.urlopen(sys.argv[1]) as response:
+        my_header_value = response.getheader('X-Request-Id')
+        print(my_header_value)
