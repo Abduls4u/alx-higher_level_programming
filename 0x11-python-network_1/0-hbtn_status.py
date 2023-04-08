@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' Contains a function that appends to the end of a file.
+''' fetches a url.
 Usage:
    ./0-hbtn_status.py
 Author:
