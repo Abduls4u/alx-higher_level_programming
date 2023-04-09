@@ -9,6 +9,7 @@ import requests
 import sys
 
 
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         letter = sys.argv[1]
@@ -24,4 +25,5 @@ if __name__ == "__main__":
         else:
             print(f"[{json.get('id')}] {json.get('name')}")
     except ValueError:
-        print('Not a valid JSON')
+        if post_req:
+            print('Not a valid JSON')
