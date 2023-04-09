@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 ''' sends a POST request to a url.
 Usage:
-   ./2-post_email.py
+   ./2-post_email.py <url> <mail>
 Author:
     Abdulsalam Abdulsomad .A. - April 9th, 2023.
 '''
