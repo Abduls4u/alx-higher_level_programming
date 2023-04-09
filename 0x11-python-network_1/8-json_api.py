@@ -9,7 +9,6 @@ import requests
 import sys
 
 
-
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         letter = sys.argv[1]
@@ -19,10 +18,13 @@ if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
     post_req = requests.post(url, values)
     json = post_req.json()
-    try:
-        if json == {}:
-            print('No result')
-        else:
-            print(f"[{json.get('id')}] {json.get('name')}")
-    except (ValueError, JSONDecodeError):
+    if json:
+        try:
+            if json == {}:
+                print('No result')
+            else:
+                print(f"[{json.get('id')}] {json.get('name')}")
+        except ValueError:
+            print('Not a valid JSON')
+    else:
         print('Not a valid JSON')

@@ -12,12 +12,11 @@ import sys
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        url = sys.argv[1]
-        values = {'email': sys.argv[2]}
-        data = parse.urlencode(values)
-        data = data.encode('ascii')
-        req = request.Request(url, data)
-        with request.urlopen(req) as response:
-            the_mail = response.read().decode()
-            print(f'{the_mail}')
+    url = sys.argv[1]
+    values = {'email': sys.argv[2]}
+    data = parse.urlencode(values)
+    data = data.encode('ascii')
+    req = request.Request(url, data)
+    with request.urlopen(req) as response:
+        the_mail = response.read().decode()
+        print(f'{the_mail}')
