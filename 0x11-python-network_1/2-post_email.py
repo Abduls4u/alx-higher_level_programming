@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' sends a POST request to a url.
+'''Sends a POST request to a url.
 Usage:
    ./2-post_email.py <url> <mail>
 Author:
