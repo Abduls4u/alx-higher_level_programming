@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Sends a POST request to a url with a mail as parameter
+'''
+Sends a POST request to a url with a mail as parameter
 Usage:
    ./2-post_email.py <url> <mail>
 Author:

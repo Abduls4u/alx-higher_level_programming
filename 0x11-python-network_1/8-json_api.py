@@ -24,6 +24,5 @@ if __name__ == "__main__":
             print('No result')
         else:
             print(f"[{json.get('id')}] {json.get('name')}")
-    except ValueError:
-        if post_req:
-            print('Not a valid JSON')
+    except (ValueError, JSONDecodeError):
+        print('Not a valid JSON')
