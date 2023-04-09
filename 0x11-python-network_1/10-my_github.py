@@ -11,6 +11,6 @@ import sys
 
 
 if __name__ == "__main__":
-    verif = auth(sys.argv[1],sys.argv[2])
+    verif = auth(sys.argv[1], sys.argv[2])
     req_json = requests.get("https://api.github.com/user", auth=verif).json()
     print(req_json.get('id'))
