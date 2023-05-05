@@ -1,0 +1,11 @@
+#!/usr/bin/node
+
+const fs = require('fs');
+
+fs.readFile('/path/to/file', 'utf8', function (error, file) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(file);
+  }
+});
