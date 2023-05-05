@@ -3,7 +3,7 @@
 const request = require('request');
 const url = process.argv[2];
 
- request(url, function (error, response, body) {
+request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
@@ -14,7 +14,7 @@ const url = process.argv[2];
     for (const movie in movies) {
       // returns a list of actors in the movie
       const actors = movies[movie].characters;
-      for (actor in actors) {
+      for (const actor in actors) {
         if (actors[actor].includes('18')) {
           count++;
         }
