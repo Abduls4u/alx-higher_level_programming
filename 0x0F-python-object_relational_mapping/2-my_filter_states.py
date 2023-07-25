@@ -16,7 +16,8 @@ def list_states_name():
     db = MySQLdb.connect(host="localhost", user=sys.argv[1],
                          passwd=sys.argv[2], db=sys.argv[3])
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name='{}'".format(sys.argv[4]))
+    cursor.execute("SELECT * FROM states WHERE name LIKE '{}'"
+                   .format(sys.argv[4]))
     states = cursor.fetchall()
     for state in states:
         print(state)
