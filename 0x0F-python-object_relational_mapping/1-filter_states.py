@@ -17,7 +17,7 @@ def list_states_N():
                          passwd=sys.argv[2], db=sys.argv[3])
     cursor = db.cursor()
     query = "SELECT * FROM states WHERE name LIKE %s"
-    place_holder_value= "N%"
+    place_holder_value = "N%"
     cursor.execute(query, (place_holder_value, ))
     states = cursor.fetchall()
     for state in states:
