@@ -24,4 +24,5 @@ def list_states_N():
         print(state)
 
 
-list_states_N()
+if __name__ == '__main__':
+    list_states_N()
